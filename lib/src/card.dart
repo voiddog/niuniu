@@ -47,6 +47,9 @@ class CardValue {
 
   @override
   bool operator ==(o) => o is CardValue && o.value == value && o.coppe == coppe;
+
+  @override
+  int get hashCode => hashValues(value, coppe);
 }
 
 class NiuCard extends StatefulWidget {
